@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>AGL Closing System</title>
+<link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+<header class="topbar no-print">
+  <div class="brand"><img class="brandLogo" src="/static/agl_logo.jpg"/><div><h2>AGL Closing System</h2><small>Formulario actual + Status Master + AGL Master</small></div></div>
+  <button onclick="newClosing()" class="primary actionBtn">+ Nuevo cierre</button>
+  <button onclick="setTab('formulario')" id="tabBtn_formulario">Formulario</button>
+  <button onclick="setTab('cierre')" id="tabBtn_cierre">Cierre</button>
+  <button onclick="setTab('factura')" id="tabBtn_factura">Factura</button>
+  <button onclick="setTab('guardados'); loadCases()" id="tabBtn_guardados">Guardados</button>
+  <button onclick="setTab('config')" id="tabBtn_config">Config</button>
+  <span class="status" id="statusMsg">Cargando...</span>
+</header>
+
+<main>
+<section id="formulario" class="tab active formPage">
+  <div class="searchBar no-print">
+    <label><b>AGL Ref</b><input id="searchRef" placeholder="Ej. AGLHKG395A"/></label>
+    <button class="primary actionBtn" onclick="searchStatus()">Buscar en Status Master</button>
+    <button class="actionBtn" onclick="reloadMasters()">Recargar Masters</button>
+    <button onclick="generateClosing()" class="primary actionBtn">Generar cierre</button>
+    <button onclick="saveCaseFile()" class="iconSave actionBtn" title="Guardar expediente">💾</button>
+  </div>
+
+  <div class="sectionTitle">WAREHOUSE</div>
+  <div class="warehouseLine">
+    <label>Select Warehouse</label>
+    <select id="warehouse" onchange="loadWarehouse()"></select>
+  </div>
+
+  <div class="sectionTitle">1. GENERAL DATA</div>
+  <div class="generalBox">
+    <div class="labelCell">AGL Reference</div><input id="agl_ref"/>
+    <div class="labelCell">Order to Invoice</div><input id="pedido" placeholder="Manual"/>
+    <div class="labelCell">Closing No.</div><input id="closing_no" placeholder="Manual"/>
+    <div class="labelCell">Warehouse</div><input id="warehouse_display" readonly/>
+  </div>
+
+  <div class="sectionTitle">2. OPERATIONAL DATA</div>
+  <table class="opTable">
+    <thead><tr><th>Field</th><th>Quantity</th><th>Unit</th></tr></thead>
+    <tbody id="opRows"></tbody>
+  </table>
+
+  <div class="sectionTitle">3. SERVICES</div>
+  <div class="servicesWrap">
+    <table class="servicesTable">
+      <thead><tr><th class="rownum"></th><th>Item</th><th>Qty</th><th>Unit</th><th>Sell</th><th>Cost</th><th>Minimum AGL</th><th>Auto</th></tr></thead>
+      <tbody id="serviceRows"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="cierre" class="tab docWrap">
+  <div class="docActions no-print">
+    <button onclick="saveCaseFile()" class="iconSave actionBtn" title="Guardar expediente">💾</button>
+    <button onclick="printActive()" class="actionBtn">Imprimir / PDF</button>
+    <button onclick="generateInvoice()" class="primary actionBtn">Generar factura</button>
+  </div>
+  <div id="closingDoc" class="doc cierreDoc"></div>
+</section>
+
+<section id="factura" class="tab docWrap">
+  <div class="docActions no-print">
+    <button onclick="saveCaseFile()" class="iconSave actionBtn" title="Guardar expediente">💾</button>
+    <button onclick="printActive()" class="actionBtn">Imprimir / PDF</button>
+  </div>
+  <div id="invoiceDoc" class="doc invoiceDoc"></div>
+</section>
+
+<section id="guardados" class="tab formPage">
+  <div class="searchBar"><input id="docSearch" placeholder="Buscar por AGL Ref, cliente o fecha"/><button onclick="loadCases()" class="actionBtn">Buscar</button></div>
+  <div id="documentsList"></div>
+</section>
+
+<section id="config" class="tab formPage">
+  <div class="sectionTitle">CONFIGURACIÓN DE MASTERS</div>
+  <div class="configBox">
+    <label>Supabase DATABASE_URL<input id="supabaseUrl" placeholder="postgresql://postgres...supabase.co:5432/postgres"/></label>
+    <label>Ruta AGL_MASTER.xlsx<input id="aglPath" placeholder="C:\\...\\AGL_MASTER.xlsx"/></label>
+    <label>Ruta STATUS MASTER AGL.xlsx<input id="statusPath" placeholder="C:\\...\\STATUS MASTER AGL.xlsx"/></label>
+    <label>Ruta CLIENT_MASTER.xlsx<input id="clientPath" placeholder="C:\\...\\CLIENT_MASTER.xlsx"/></label>
+    <label>Carpeta guardados JSON<input id="savedDir" placeholder="saved"/></label>
+    <label>Carpeta exportaciones<input id="exportsDir" placeholder="exports"/></label>
+    <button class="primary actionBtn" onclick="saveConfig()">Guardar rutas y recargar</button>
+    <button class="actionBtn" onclick="reloadMasters()">Recargar ahora</button>
+  </div>
+  <pre id="configState"></pre>
+</section>
+</main>
+<div id="busyOverlay" class="busyOverlay" aria-hidden="true">
+  <div class="busyCard">
+    <div class="moonSpinner"></div>
+    <div id="busyText" class="busyText">Procesando...</div>
+    <div class="busyHint">Espere un momento, no cierre esta ventana.</div>
+  </div>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>

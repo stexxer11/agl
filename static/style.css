@@ -1,0 +1,255 @@
+:root{--bg:#eaf1f7;--card:#fff;--navy:#06142c;--line:#2f3f59;--cyan:#8ed1dc;--blue:#0b66d6;--yellow:#ffc000;--muted:#6b7280}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#000;overflow:hidden}.topbar{height:62px;display:flex;align-items:center;gap:8px;padding:5px 14px;background:#f7fbff;border-top:4px solid #111;border-bottom:1px solid #c8d5e5;position:sticky;top:0;z-index:5}.brand{display:flex;align-items:center;gap:10px;min-width:400px}.brandLogo{width:88px;height:50px;object-fit:contain}.brand h2{margin:0;font-size:22px;line-height:1.05}.brand small{font-size:12px;color:#334155}button{border:1px solid var(--blue);background:#fff;color:#064fa7;padding:7px 12px;border-radius:4px;cursor:pointer;font-weight:700;font-size:13px}.primary,button.active{background:var(--blue);color:#fff}button:hover{filter:brightness(.96)}.status{font-size:12px;background:#eef3f8;padding:8px 12px;border-radius:16px;white-space:nowrap}.tab{display:none}.tab.active{display:block}.formPage{height:calc(100vh - 62px);overflow:auto;padding:7px 12px 12px}.searchBar{display:flex;align-items:end;gap:8px;margin-bottom:6px;background:#fff;border:1px solid #cbd6e2;padding:6px 8px;position:sticky;top:0;z-index:3}.searchBar label{display:flex;flex-direction:column;font-size:12px}.searchBar input,.warehouseLine select,.configBox input{border:1px solid #64748B;padding:5px 8px;background:#fff;font-size:13px;height:29px}.searchBar input{width:210px}.sectionTitle{display:inline-block;background:var(--navy);color:#fff;padding:4px 18px;font-size:16px;margin:3px 0 0 14px;position:relative;z-index:1}.warehouseLine{border:1px solid var(--line);background:#fff;margin-top:-1px;padding:7px 14px;display:flex;gap:12px;align-items:center;max-width:620px}.warehouseLine label{font-weight:bold;font-size:13px}.warehouseLine select{width:220px}.generalBox{display:grid;grid-template-columns:190px 300px;gap:4px;max-width:530px;padding:8px 14px;background:#fff;border:1px solid var(--line);margin-top:-1px}.labelCell{border:1px solid #64748B;background:#f8fafc;padding:5px 8px;font-size:12px;font-weight:700;height:27px}.generalBox input{border:1px solid #64748B;padding:4px 8px;font-size:12px;height:27px}.opTable{border-collapse:separate;border-spacing:4px 3px;background:#fff;border:1px solid var(--line);width:100%;max-width:640px;padding:6px 12px;margin-top:-1px;margin-bottom:3px}.opTable th{background:var(--cyan);border:1px solid var(--line);padding:4px;font-size:12px}.opTable td{border:1px solid var(--line);padding:3px 7px;font-size:12px;background:#fff;height:24px}.opTable td:first-child{font-weight:700}.opTable input{border:0;width:100%;font-size:12px;height:17px;padding:0}.opTable .unit{text-align:center;background:#f8fafc;width:120px}.servicesWrap{background:#fff;border:1px solid var(--line);padding:10px 10px 8px 10px;height:390px;min-height:260px;overflow:auto;margin-top:-1px}.servicesTable{border-collapse:collapse;width:100%;font-size:12px}.servicesTable th{background:var(--cyan);border:1px solid var(--line);padding:5px;text-align:center;position:sticky;top:0;z-index:1}.servicesTable td{border:1px solid var(--line);padding:3px 6px;background:#fff;height:24px}.servicesTable .rownum{width:36px;background:var(--cyan);text-align:center;font-weight:700}.servicesTable input{width:100%;border:0;background:#fff;font-size:12px;text-align:right;height:17px;padding:0}.money{text-align:right;white-space:nowrap}.center{text-align:center}.docWrap{height:calc(100vh - 62px);padding:8px 12px;overflow:auto}.docActions{display:flex;gap:8px;justify-content:flex-end;margin-bottom:8px;position:sticky;top:0;background:var(--bg);z-index:3;padding:4px 0}.doc{background:#fff;margin:0 auto 35px;border:3px solid #000;max-width:980px;min-height:760px;font-family:Arial,Helvetica,sans-serif}.cierreDoc{font-size:11px}.docHeader{display:grid;grid-template-columns:280px 1fr;align-items:center;min-height:106px;padding:14px 26px}.docLogoImg{width:215px;height:auto;object-fit:contain}.company{text-align:center;font-size:12px;line-height:1.3}.bar{background:#000;color:#fff;text-align:center;font-weight:bold;padding:5px 8px;font-size:12px}.info2{display:grid;grid-template-columns:1fr 1.35fr;gap:22px;padding:7px 12px}.infoRow{display:grid;grid-template-columns:148px 1fr;gap:5px;min-height:18px;font-size:12px}.infoRow b{font-weight:800}.infoRow span{min-height:16px}.infoRow span[contenteditable=true]:focus,.docTable td[contenteditable=true]:focus,.invoiceTable td[contenteditable=true]:focus{outline:2px solid #7cc0ff;background:#eef8ff}.docTable{width:100%;border-collapse:collapse;font-size:11px}.docTable th,.docTable td{border:1px solid #000;padding:4px}.docTable th{background:#f5f5f5;text-align:center}.docTable td:nth-child(n+3){text-align:right}.docTable tfoot td{background:var(--yellow);font-weight:bold;font-size:12px}.profit{display:flex;justify-content:space-between;background:#000;color:white;padding:6px 12px;font-size:13px;font-weight:bold}.yellow{background:var(--yellow);font-weight:bold;padding:6px 8px}.notes{height:62px;padding:8px;border-top:1px solid #000}.metricRows{width:100%;border-collapse:collapse;font-size:11px}.metricRows td{border:1px solid #000;padding:4px}.metricRows td:first-child{text-align:right;font-weight:bold}.invoiceDoc{padding:32px;max-width:860px;min-height:880px}.invoiceHeader{display:flex;justify-content:space-between;align-items:flex-start}.invoiceHeader .docLogoImg{width:220px}.invoiceNo{border:1px solid #000;text-align:center;min-width:105px;min-height:75px;padding:8px;color:#d00}.invoiceNo b{color:#000}.invoiceInfo{display:grid;grid-template-columns:1.3fr 1fr 1.35fr;border:1px solid #000;margin-top:20px;font-size:12px}.invoiceInfo>div{border-right:1px solid #000;padding:7px;min-height:88px}.invoiceInfo>div:last-child{border-right:0}.invoiceTable{width:100%;border-collapse:collapse;margin-top:16px;font-size:12px}.invoiceTable th,.invoiceTable td{border:1px solid #000;padding:6px}.invoiceTable th{background:#f8f8f8}.invoiceTable td:nth-child(n+2){text-align:right}.invoiceTotal{display:flex;justify-content:flex-end;gap:80px;margin:22px 0;font-size:13px}.bank{margin-top:22px;line-height:1.5;font-size:12px}.bank p{margin:18px 0}.docCard{background:#fff;border:1px solid #cbd6e2;margin:8px 0;padding:10px;display:flex;justify-content:space-between;gap:12px}.configBox{display:flex;flex-direction:column;gap:12px;max-width:1000px}.configBox label{font-weight:bold}.configBox input{display:block;width:100%;margin-top:4px}pre{background:#fff;border:1px solid #cbd6e2;padding:10px;overflow:auto}
+@media(max-height:760px){.topbar{height:56px}.brandLogo{width:76px;height:44px}.brand h2{font-size:19px}.brand small{display:none}.formPage,.docWrap{height:calc(100vh - 56px)}.servicesWrap{height:300px}.opTable{max-width:620px}.sectionTitle{font-size:15px}.generalBox{grid-template-columns:180px 280px}}
+@media(max-width:1150px){body{overflow:auto}.formPage{overflow:auto;height:auto}.servicesWrap{height:360px}.brand{min-width:320px}.brandLogo{width:82px}.topbar{flex-wrap:wrap;height:auto}.docWrap{height:auto}}
+@media print{.no-print,.topbar,.docActions{display:none!important}body{background:#fff;overflow:visible}.tab{display:none!important}.tab.active{display:block!important}.docWrap{padding:0;height:auto;overflow:visible}.doc{margin:0 auto;max-width:980px;border:3px solid #000;box-shadow:none}.invoiceDoc{max-width:860px}.formPage{display:none!important}@page{size:letter;margin:8mm}}
+
+/* V7 MOON: bloqueos y animación de carga */
+.busyOverlay{position:fixed;inset:0;background:rgba(6,20,44,.52);display:none;align-items:center;justify-content:center;z-index:9999;backdrop-filter:blur(2px)}
+.busyOverlay.show{display:flex;animation:fadeIn .16s ease-out}
+.busyCard{background:#fff;border:2px solid #06142c;border-radius:14px;min-width:320px;max-width:440px;padding:24px 28px;text-align:center;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+.moonSpinner{width:64px;height:64px;border-radius:50%;margin:0 auto 14px;border:7px solid #dbeafe;border-top-color:#0b66d6;border-right-color:#06142c;animation:spinMoon .85s linear infinite}
+.busyText{font-size:18px;font-weight:800;color:#06142c;margin-bottom:6px}.busyHint{font-size:12px;color:#64748b}.isBusy{cursor:wait}button:disabled,input:disabled,select:disabled,textarea:disabled{opacity:.62;cursor:not-allowed}.iconSave{font-size:20px;line-height:1;min-width:44px;padding:7px 10px}.docActions .iconSave{font-size:22px;min-width:48px}@keyframes spinMoon{to{transform:rotate(360deg)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* V7 MOON: impresión/PDF con colores fieles */
+.doc,.doc *,.bar,.yellow,.profit,.docTable tfoot td,.servicesTable th,.opTable th,.sectionTitle{print-color-adjust:exact!important;-webkit-print-color-adjust:exact!important;color-adjust:exact!important}
+@media print{html,body{print-color-adjust:exact!important;-webkit-print-color-adjust:exact!important}.doc{background:#fff!important}.bar{background:#000!important;color:#fff!important}.yellow,.docTable tfoot td{background:#ffc000!important;color:#000!important}.profit{background:#000!important;color:#fff!important}.docHeader img,.invoiceHeader img{display:block!important}}
+
+/* Genesis V8.1: cierre/factura más fieles y compactos */
+.closingHeader{grid-template-columns:330px 1fr;min-height:170px;padding:18px 34px}.closingHeader .docLogoImg{width:260px}.closingNoBox{display:inline-block;border:2px solid #000;color:#e00000;font-size:18px;font-weight:800;min-width:72px;margin-top:12px;padding:4px 9px;background:#fff;text-align:center}.closingInfo .infoRow{min-height:24px;font-size:14px}.closingInfo{padding:10px 14px 8px 14px}.cierreDoc .bar{font-size:13px}.cierreDoc .docTable{font-size:11px}.cierreDoc .docTable th,.cierreDoc .docTable td{padding:3px 4px}
+.invoiceDoc{padding:18px 22px;max-width:860px;min-height:auto}.invoiceHeader{min-height:168px}.invoiceHeader .docLogoImg{width:220px}.invoiceInfo{margin-top:10px;font-size:11.5px}.invoiceInfo>div{min-height:70px;padding:5px 6px}.invoiceTable{margin-top:10px;font-size:11px}.invoiceTable th,.invoiceTable td{padding:4px 5px}.invoiceTotal{margin:12px 0;font-size:12px}.bank{margin-top:8px;line-height:1.28;font-size:10.5px}.bank p{margin:8px 0}.invoiceNo{min-width:100px;min-height:62px;padding:6px}.invoiceNo span{display:inline-block;margin-top:8px;color:#e00000;font-weight:800;font-size:15px}
+@media print{.invoiceDoc{padding:10mm 9mm!important;max-width:100%!important;min-height:auto!important;border:0!important}.invoiceHeader{min-height:150px!important}.invoiceHeader .docLogoImg{width:205px!important}.invoiceInfo{font-size:10.5px!important;margin-top:7px!important}.invoiceInfo>div{min-height:60px!important;padding:4px 5px!important}.invoiceTable{font-size:10px!important;margin-top:7px!important}.invoiceTable th,.invoiceTable td{padding:3px 4px!important}.invoiceTotal{margin:8px 0!important;font-size:11px!important}.bank{font-size:9.3px!important;line-height:1.18!important;margin-top:5px!important}.bank p{margin:5px 0!important}.invoiceNo{min-height:52px!important}.closingNoBox{print-color-adjust:exact!important;-webkit-print-color-adjust:exact!important}}
+
+/* Genesis V8.2: cierre con tamaño de letra uniforme */
+.cierreDoc,
+.cierreDoc .infoRow,
+.cierreDoc .infoRow b,
+.cierreDoc .infoRow span,
+.cierreDoc .docTable,
+.cierreDoc .docTable th,
+.cierreDoc .docTable td,
+.cierreDoc .docTable tfoot td,
+.cierreDoc .metricRows,
+.cierreDoc .metricRows td,
+.cierreDoc .profit,
+.cierreDoc .yellow,
+.cierreDoc .notes,
+.cierreDoc .bar {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 12px !important;
+  line-height: 1.22 !important;
+}
+.cierreDoc .infoRow{
+  min-height: 21px !important;
+  grid-template-columns: 145px 1fr !important;
+}
+.cierreDoc .infoRow b{
+  font-weight: 800 !important;
+}
+.cierreDoc .docTable th,
+.cierreDoc .docTable td,
+.cierreDoc .metricRows td{
+  padding: 3px 4px !important;
+}
+.cierreDoc .profit{
+  padding: 5px 12px !important;
+  font-weight: 800 !important;
+}
+.cierreDoc .bar{
+  padding: 4px 8px !important;
+  font-weight: 800 !important;
+}
+/* El número de cierre se mantiene destacado */
+.cierreDoc .closingNoBox{
+  font-size: 18px !important;
+  line-height: 1.1 !important;
+}
+@media print{
+  .cierreDoc,
+  .cierreDoc .infoRow,
+  .cierreDoc .infoRow b,
+  .cierreDoc .infoRow span,
+  .cierreDoc .docTable,
+  .cierreDoc .docTable th,
+  .cierreDoc .docTable td,
+  .cierreDoc .docTable tfoot td,
+  .cierreDoc .metricRows,
+  .cierreDoc .metricRows td,
+  .cierreDoc .profit,
+  .cierreDoc .yellow,
+  .cierreDoc .notes,
+  .cierreDoc .bar{
+    font-size: 10.5px !important;
+    line-height: 1.15 !important;
+  }
+}
+/* V9 Client Master: selects inside closing header */
+.docSelect{width:100%;border:0;background:#fff;font-family:Arial,Helvetica,sans-serif;font-size:inherit;font-weight:400;padding:0;min-height:18px;color:#000}
+.docSelect:focus{outline:2px solid #7cc0ff;background:#eef8ff}
+@media print{.docSelect{appearance:none;-webkit-appearance:none;border:0;background:#fff!important;color:#000!important}}
+
+
+/* V11 DESIGN POLISH: selects alineados, sin sangría visual y factura con más aire */
+.cierreDoc .docSelect{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:12px;
+  line-height:18px;
+  min-height:18px;
+  height:20px;
+  width:100%;
+  border:0;
+  background:transparent;
+  color:#000;
+  padding:0 18px 0 0;
+  margin:0;
+  vertical-align:middle;
+  appearance:auto;
+  -webkit-appearance:menulist;
+}
+.cierreDoc .infoRow{
+  align-items:center;
+  line-height:18px;
+}
+.cierreDoc .infoRow b,
+.cierreDoc .infoRow span,
+.cierreDoc .infoRow select{
+  font-size:12px!important;
+  font-weight:normal;
+}
+.cierreDoc .infoRow b{
+  font-weight:800!important;
+}
+.cierreDoc .shipmentInfo{
+  padding-top:10px;
+  padding-bottom:12px;
+}
+.cierreDoc .shipmentInfo .infoRow{
+  min-height:24px;
+  margin-bottom:5px;
+}
+.cierreDoc .shipmentInfo .infoRow b,
+.cierreDoc .shipmentInfo .infoRow span,
+.cierreDoc .shipmentInfo .infoRow select{
+  line-height:20px;
+}
+.invoiceInfo.cleanInvoiceInfo{
+  display:grid;
+  grid-template-columns:1.28fr .92fr 1.36fr;
+  border:1px solid #000;
+  margin-top:16px;
+  font-size:12px;
+  line-height:1.25;
+}
+.invoiceInfo.cleanInvoiceInfo>div{
+  border-right:1px solid #000;
+  padding:7px 9px;
+  min-height:98px;
+}
+.invoiceInfo.cleanInvoiceInfo>div:last-child{border-right:0;}
+.invCustomer b,.invRoute b,.invMeta b{font-weight:800;}
+.invCustomer .customerLines{margin-top:4px;line-height:1.25;}
+.invRoute{display:grid;grid-template-rows:1fr 1fr;gap:0;padding:0!important;}
+.invRouteBlock{display:grid;grid-template-columns:92px 1fr;align-items:start;padding:7px 9px;min-height:48px;}
+.invRouteBlock:first-child{border-bottom:1px solid #000;}
+.invRouteValue{font-size:12px;line-height:1.18;text-align:center;white-space:normal;word-break:normal;}
+.invMetaRow{display:grid;grid-template-columns:70px 1fr;gap:6px;min-height:20px;align-items:start;}
+.invShipment{display:flex;gap:20px;flex-wrap:wrap;margin-top:6px;line-height:1.25;}
+@media print{
+  .cierreDoc .docSelect{border:0!important;background:transparent!important;color:#000!important;padding:0!important;appearance:none!important;-webkit-appearance:none!important;}
+  .invoiceInfo.cleanInvoiceInfo{font-size:10.5px!important;line-height:1.18!important;}
+  .invoiceInfo.cleanInvoiceInfo>div{padding:5px 6px!important;min-height:72px!important;}
+  .invRouteBlock{padding:5px 6px!important;min-height:36px!important;grid-template-columns:78px 1fr!important;}
+  .invShipment{gap:12px!important;margin-top:3px!important;}
+}
+
+
+/* V12 FINAL: banco fijo AGL y selects visualmente alineados */
+.cierreDoc .infoRow{grid-template-columns:150px minmax(0,1fr)!important;column-gap:8px!important;}
+.cierreDoc .infoRow span,.cierreDoc .infoRow .docSelect{display:block!important;margin:0!important;}
+.cierreDoc .docSelect{
+  appearance:none!important;
+  -webkit-appearance:none!important;
+  background-color:transparent!important;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='6' viewBox='0 0 9 6'%3E%3Cpath fill='%23000' d='M0 0h9L4.5 6z'/%3E%3C/svg%3E")!important;
+  background-repeat:no-repeat!important;
+  background-position:right 4px center!important;
+  background-size:9px 6px!important;
+  border:0!important;
+  padding:0 18px 0 0!important;
+  margin:0!important;
+  text-indent:0!important;
+  line-height:18px!important;
+  height:20px!important;
+  min-height:20px!important;
+  vertical-align:baseline!important;
+}
+.cierreDoc .shipmentInfo .docSelect{background-position:right 4px center!important;}
+.cierreDoc .infoRow b{padding:0!important;margin:0!important;}
+.bank{font-size:11px!important;line-height:1.32!important;margin-top:10px!important;}
+.bank p{margin:9px 0!important;}
+@media print{
+  .cierreDoc .docSelect{background-image:none!important;padding:0!important;appearance:none!important;-webkit-appearance:none!important;}
+  .bank{font-size:9.5px!important;line-height:1.18!important;margin-top:5px!important;}
+  .bank p{margin:5px 0!important;}
+}
+
+/* GENESIS V13: factura alineada como Excel, métricas en casillas fijas */
+.invoiceInfo.invoiceV13{
+  grid-template-columns:1.28fr .82fr 1.42fr!important;
+  margin-top:14px!important;
+  font-size:11.5px!important;
+  line-height:1.22!important;
+}
+.invoiceInfo.invoiceV13>div{
+  padding:8px 9px!important;
+  min-height:106px!important;
+}
+.invoiceV13 .invCustomer{padding-top:10px!important;}
+.invoiceV13 .invCustomer b{display:block;margin-bottom:6px;}
+.invoiceV13 .customerLines{line-height:1.26;min-height:72px;}
+.invoiceV13 .invRoute{display:grid!important;grid-template-rows:1fr 1fr;padding:0!important;}
+.invoiceV13 .invRouteBlock{
+  display:block!important;
+  padding:9px 10px!important;
+  min-height:52px!important;
+}
+.invoiceV13 .invRouteBlock:first-child{border-bottom:1px solid #000!important;}
+.invoiceV13 .invRouteBlock b{display:block;margin-bottom:6px;}
+.invoiceV13 .invRouteValue{
+  display:block;
+  text-align:center;
+  line-height:1.16;
+  min-height:24px;
+  white-space:normal;
+}
+.invoiceV13 .invMeta{padding-left:7px!important;padding-right:7px!important;}
+.invoiceV13 .invMetaRow{
+  display:grid!important;
+  grid-template-columns:52px minmax(0,1fr)!important;
+  gap:5px!important;
+  align-items:start!important;
+  min-height:19px!important;
+  margin-bottom:1px!important;
+}
+.invoiceV13 .invShipmentGrid{
+  display:grid;
+  grid-template-columns:88px 92px 92px;
+  grid-auto-rows:18px;
+  column-gap:8px;
+  row-gap:1px;
+  margin-top:2px;
+  align-items:center;
+  font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+}
+.invoiceV13 .invShipmentGrid span{display:block;text-align:left;}
+@media print{
+  .invoiceInfo.invoiceV13{font-size:10.5px!important;margin-top:8px!important;}
+  .invoiceInfo.invoiceV13>div{padding:5px 6px!important;min-height:74px!important;}
+  .invoiceV13 .invCustomer{padding-top:7px!important;}
+  .invoiceV13 .invCustomer b{margin-bottom:4px!important;}
+  .invoiceV13 .customerLines{line-height:1.17!important;min-height:50px!important;}
+  .invoiceV13 .invRouteBlock{padding:6px 7px!important;min-height:38px!important;}
+  .invoiceV13 .invRouteBlock b{margin-bottom:3px!important;}
+  .invoiceV13 .invMetaRow{grid-template-columns:48px minmax(0,1fr)!important;min-height:16px!important;margin-bottom:0!important;}
+  .invoiceV13 .invShipmentGrid{grid-template-columns:76px 78px 78px!important;grid-auto-rows:15px!important;column-gap:5px!important;margin-top:1px!important;}
+}
